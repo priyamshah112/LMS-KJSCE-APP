@@ -13,8 +13,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         myWebView = (WebView) findViewById(R.id.webview);
+        myWebView.getSettings().setUserAgentString("LMS KJSCE");
         WebSettings websettings = myWebView.getSettings();
         websettings.setJavaScriptEnabled(true);
         myWebView.loadUrl("https://lms-kjsce.somaiya.edu/");
